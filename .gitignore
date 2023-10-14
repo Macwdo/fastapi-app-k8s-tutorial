@@ -1,0 +1,6 @@
+venv/
+kubectl
+minikube-linux-amd64
+.vscode
+.idea
+__pycache__

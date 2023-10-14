@@ -20,8 +20,12 @@ spec:
         ports:
         - containerPort: 8000
 
-        
-        env:
-          - name: "TEST_ENV"
-            value: "is there something?"
-
+        # env:
+        #   - name: TEST_ENV
+        #     valueFrom:
+        #       configMapKeyRef:
+        #         name: app-config-map
+        #         key: TEST_ENV
+        envFrom:
+          - configMapRef:
+              name: app-config-map
